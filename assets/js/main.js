@@ -69,7 +69,9 @@
                 $.ajax({
                     type: 'POST',
                     url: 'ajax/mail.php',
-                    data: { form_data: form_data },
+                    data: {
+                        form_data: form_data
+                    },
                     success: function (data) {
                         $('button[type="submit"]', $this).removeAttr('disabled').val('Message');
 
@@ -160,6 +162,7 @@
         const $accordion_content = $accordion_wrapper.find(".accordion__content").first();
         const $accordion_open = "accordion--open";
         const $accordion_title = $(this); // The clicked title
+        const $radio_input = $accordion_title.find('input[type="radio"]').first(); // Find the radio button inside the title
 
         // Stop any ongoing animation to prevent jump effect
         $accordion_content.stop(true, true);
@@ -168,7 +171,8 @@
         $accordion_wrapper.siblings(".accordion_item").each(function () {
             $(this).removeClass($accordion_open); // Remove open class from other accordions
             $(this).find(".accordion__title").removeClass("show"); // Remove show class from their titles
-            $(this).find(".accordion__content").stop(true, true).slideUp(); // Close the content with stop to prevent jump
+            $(this).find(".accordion__content").stop(true, true).slideUp(); // Close the content
+            $(this).find('input[type="radio"]').prop('checked', false); // Uncheck the radio button in other accordions
         });
 
         // If this accordion is already open
@@ -176,14 +180,18 @@
             $accordion_content.slideUp(); // Close the content
             $accordion_wrapper.removeClass($accordion_open); // Remove the open class
             $accordion_title.removeClass("show"); // Remove the show class from the title
+            $radio_input.prop('checked', false); // Uncheck the radio button
         }
         // If this accordion is not open
         else {
             $accordion_content.slideDown(); // Open the content
             $accordion_wrapper.addClass($accordion_open); // Add the open class
             $accordion_title.addClass("show"); // Add the show class to the title
+            $radio_input.prop('checked', true); // Check the radio button
         }
     });
+
+
 
 
     const prevBtns = document.querySelectorAll(".btn_prev");
@@ -249,16 +257,16 @@
                 method: 'POST',
                 body: new FormData(form)
             })
-            .then(response => $(".subscribe_field").append("<span class='st_submit_form_alert'>Thanks. The form has been submitted</span>")  )
+            .then(response => $(".subscribe_field").append("<span class='st_submit_form_alert'>Thanks. The form has been submitted</span>"))
             .then(() => {
-                setTimeout(function(){
+                setTimeout(function () {
                     $(".subscribe_field .st_submit_form_alert").hide();
                 }, 3500)
             })
             .catch(error => console.error('Error!', error.message))
     });
 
-    
+
 
 
 
