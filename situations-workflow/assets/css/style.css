@@ -2331,7 +2331,7 @@ mark {
       -ms-flex-pack: start;
       justify-content: start;
       margin: 0;
-      margin-left: 39px;
+      padding-left: 39px;
       position: relative;
       cursor: pointer;
       -o-transition: 0.3s ease-in-out;
@@ -2462,18 +2462,19 @@ mark {
     position: relative; }
   .funnel_works_sec .solution_step .form_step_content .step_info {
     margin-bottom: 32px; }
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked,
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:not(:checked) {
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:checked,
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:not(:checked) {
     position: absolute;
     left: -9999px; }
   .funnel_works_sec .solution_step .form_step_content .accordion__title p {
     position: absolute;
-    left: -37px;
-    top: 10px; }
+    left: 2px;
+    top: 10px;
+    z-index: -1; }
     .funnel_works_sec .solution_step .form_step_content .accordion__title p label {
       position: relative; }
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked + label,
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:not(:checked) + label {
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:checked + label,
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:not(:checked) + label {
     position: relative;
     padding-bottom: 24px;
     cursor: pointer;
@@ -2484,8 +2485,8 @@ mark {
     margin: 0;
     text-transform: capitalize;
     font-family: var(--secondary-font); }
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked + label:before,
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:not(:checked) + label:before {
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:checked + label:before,
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:not(:checked) + label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -2494,131 +2495,38 @@ mark {
     height: 20px;
     border: 1px solid var(--primary-color);
     border-radius: 100%;
-    background: #FFF; }
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked + label:before {
-    border-color: var(--primary-color);
-    background: var(--primary-color); }
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked + label:after,
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:not(:checked) + label:after {
-    content: "\f00c";
-    font-family: "FontAwesome";
-    width: auto;
-    height: auto;
-    background: transparent;
-    position: absolute;
-    color: #FFFFFF;
-    bottom: 1.5px;
-    left: 4.5px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
-    .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked + label:after [type="checkbox"]:not(:checked) + label:after,
-    .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:not(:checked) + label:after [type="checkbox"]:not(:checked) + label:after {
-      opacity: 0;
-      -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-      transform: scale(0); }
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0); }
-  .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-  .funnel_works_sec .rlt_pd_service .form_step_content h2 {
-    margin-bottom: 32px;
-    position: relative; }
-  .funnel_works_sec .rlt_pd_service .form_step_content .step_info {
-    margin-bottom: 32px; }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"] {
-    position: absolute;
-    left: -9999px; }
-  .funnel_works_sec .rlt_pd_service .form_step_content .accordion__title p {
-    position: absolute;
-    left: -37px;
-    top: 0px;
-    margin-bottom: 0; }
-    .funnel_works_sec .rlt_pd_service .form_step_content .accordion__title p label {
-      position: relative; }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label,
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label {
-    position: relative;
-    padding-bottom: 24px;
-    cursor: pointer;
-    font-size: 12px;
-    line-height: 16px;
-    display: inline-block;
-    color: #949494;
-    margin: 0;
-    text-transform: capitalize;
-    font-family: var(--secondary-font); }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:before,
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 100%;
-    background: #FFF; }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:before {
-    border-color: var(--primary-color);
-    background: var(--primary-color); }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:after,
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label:after {
-    content: "\f00c";
-    font-family: "FontAwesome";
-    width: auto;
-    height: auto;
-    background: transparent;
-    position: absolute;
-    color: #FFFFFF;
-    bottom: 1.5px;
-    left: 4.5px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
-    .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:after [type="checkbox"]:not(:checked) + label:after,
-    .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label:after [type="checkbox"]:not(:checked) + label:after {
-      opacity: 0;
-      -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-      transform: scale(0); }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0); }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-  .funnel_works_sec .rlt_pd_service .form_step_content .accordion__content {
-    padding-top: 4px 0 0; }
-    .funnel_works_sec .rlt_pd_service .form_step_content .accordion__content p {
-      margin-bottom: 0; }
-  .funnel_works_sec .rlt_pd_service .accordion_item.accordion--nested .accordion__content {
-    padding: 4px 0 0;
-    margin: 0; }
-    .funnel_works_sec .rlt_pd_service .accordion_item.accordion--nested .accordion__content::after, .funnel_works_sec .rlt_pd_service .accordion_item.accordion--nested .accordion__content::before {
-      display: none; }
-  .funnel_works_sec .rlt_pd_service .accordion_item h4.accordion__title::before {
-    top: -12px; }
-  .funnel_works_sec .rlt_pd_service .accordion_item:not(.accordion--nested) .accordion__content::after {
+    background: #fff; }
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:checked + label:before {
+    border-color: var(--primary-color); }
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:checked + label:after,
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:not(:checked) + label:after {
     content: "";
+    width: 14px;
+    height: 14px;
+    background: var(--primary-color);
     position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 2px;
-    height: 23px; }
+    bottom: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .funnel_works_sec .solution_step .form_step_content [type="radio"]:checked + label:after [type="radio"]:not(:checked) + label:after,
+    .funnel_works_sec .solution_step .form_step_content [type="radio"]:not(:checked) + label:after [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0); }
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .funnel_works_sec .solution_step .form_step_content [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
   .funnel_works_sec .final_submition {
     max-width: 727px;
     width: 100%;
