@@ -1983,7 +1983,7 @@ mark {
               background: var(--primary-color);
               top: 10.5px; }
     .funnel_works_sec .form_step .form_step_related_service .step_info {
-      max-width: 480px;
+      max-width: 100%;
       width: 100%; }
     .funnel_works_sec .form_step .form_step_related_service .related_service_product h2 {
       font-size: 24px;
@@ -2161,6 +2161,8 @@ mark {
       -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
       box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
       border-radius: 8px !important; }
+    .funnel_works_sec .form_step .question_field input:focus {
+      border-color: var(--primary-light); }
     .funnel_works_sec .form_step .question_field input::-webkit-input-placeholder {
       color: #949494; }
     .funnel_works_sec .form_step .question_field input:-ms-input-placeholder {
@@ -2319,7 +2321,7 @@ mark {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 100%;
+      width: calc(100% - 39px);
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2347,7 +2349,7 @@ mark {
         display: inline-block; }
       .funnel_works_sec .form_step .accordion_item h2.accordion__title i {
         position: absolute;
-        left: 0;
+        right: 0;
         top: 11px;
         color: #FFF;
         background: var(--primary-color);
@@ -2457,6 +2459,12 @@ mark {
         border-bottom-left-radius: 8px !important; }
     .funnel_works_sec .form_step .accordion_item.accordion--nested .result_list li:not(:last-child) {
       margin-bottom: 10px; }
+  .funnel_works_sec .solution_step .accordion_item > p {
+    position: absolute;
+    left: 24px;
+    top: 34px; }
+    .funnel_works_sec .solution_step .accordion_item > p label {
+      position: relative; }
   .funnel_works_sec .solution_step .form_step_content h2 {
     margin-bottom: 32px;
     position: relative; }
@@ -2466,12 +2474,6 @@ mark {
   .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:not(:checked) {
     position: absolute;
     left: -9999px; }
-  .funnel_works_sec .solution_step .form_step_content .accordion__title p {
-    position: absolute;
-    left: -37px;
-    top: 10px; }
-    .funnel_works_sec .solution_step .form_step_content .accordion__title p label {
-      position: relative; }
   .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked + label,
   .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:not(:checked) + label {
     position: relative;
@@ -2493,7 +2495,7 @@ mark {
     width: 20px;
     height: 20px;
     border: 1px solid var(--primary-color);
-    border-radius: 100%;
+    border-radius: 4px;
     background: #FFF; }
   .funnel_works_sec .solution_step .form_step_content [type="checkbox"]:checked + label:before {
     border-color: var(--primary-color);
@@ -2529,14 +2531,19 @@ mark {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
+  .funnel_works_sec .rlt_pd_service .accordion_item:not(.accordion--nested) {
+    min-height: 80px; }
+  .funnel_works_sec .rlt_pd_service .accordion_item h2.accordion__title {
+    margin-left: 0;
+    width: 100%;
+    padding-left: 9px; }
+    .funnel_works_sec .rlt_pd_service .accordion_item h2.accordion__title i {
+      top: 2.5px; }
   .funnel_works_sec .rlt_pd_service .form_step_content h2 {
     margin-bottom: 32px;
     position: relative; }
   .funnel_works_sec .rlt_pd_service .form_step_content .step_info {
     margin-bottom: 32px; }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"] {
-    position: absolute;
-    left: -9999px; }
   .funnel_works_sec .rlt_pd_service .form_step_content .accordion__title p {
     position: absolute;
     left: -37px;
@@ -2544,63 +2551,6 @@ mark {
     margin-bottom: 0; }
     .funnel_works_sec .rlt_pd_service .form_step_content .accordion__title p label {
       position: relative; }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label,
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label {
-    position: relative;
-    padding-bottom: 24px;
-    cursor: pointer;
-    font-size: 12px;
-    line-height: 16px;
-    display: inline-block;
-    color: #949494;
-    margin: 0;
-    text-transform: capitalize;
-    font-family: var(--secondary-font); }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:before,
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 100%;
-    background: #FFF; }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:before {
-    border-color: var(--primary-color);
-    background: var(--primary-color); }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:after,
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label:after {
-    content: "\f00c";
-    font-family: "FontAwesome";
-    width: auto;
-    height: auto;
-    background: transparent;
-    position: absolute;
-    color: #FFFFFF;
-    bottom: 1.5px;
-    left: 4.5px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
-    .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:after [type="checkbox"]:not(:checked) + label:after,
-    .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label:after [type="checkbox"]:not(:checked) + label:after {
-      opacity: 0;
-      -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-      transform: scale(0); }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0); }
-  .funnel_works_sec .rlt_pd_service .form_step_content [type="checkbox"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
   .funnel_works_sec .rlt_pd_service .form_step_content .accordion__content {
     padding-top: 4px 0 0; }
     .funnel_works_sec .rlt_pd_service .form_step_content .accordion__content::after {
@@ -2701,6 +2651,11 @@ mark {
     -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     border-radius: 8px !important; }
+  .funnel_works_sec .feeback_step .input-group textarea {
+    border-color: #D0D5DD; }
+  .funnel_works_sec .feeback_step .input-group input[type="email"]:focus,
+  .funnel_works_sec .feeback_step .input-group textarea:focus {
+    border-color: var(--primary-light); }
 
 .form_step_field input,
 .form_step_field textarea {

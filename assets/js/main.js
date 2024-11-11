@@ -157,11 +157,14 @@
     });
 
     // Steps Acordion
+    // Prevent the accordion toggle effect when clicking the checkbox
     $(".accordion__title input[type='checkbox']").click(function (event) {
         event.stopPropagation();
     });
 
+    // Handle the accordion title click without affecting the checkbox
     $(".accordion__title").click(function (event) {
+        // Check if the clicked target is a checkbox, and return if so to avoid toggling
         if ($(event.target).is('input[type="checkbox"]')) {
             return;
         }
@@ -186,7 +189,6 @@
             $accordion_wrapper.removeClass($accordion_open);
             $accordion_title.removeClass("show");
         }
-
         // If this accordion is not open
         else {
             $accordion_content.slideDown();
@@ -194,6 +196,7 @@
             $accordion_title.addClass("show");
         }
     });
+
 
 
 

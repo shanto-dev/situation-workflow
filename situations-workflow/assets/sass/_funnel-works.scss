@@ -583,7 +583,7 @@
                 align-items: start;
                 justify-content: start;
                 margin: 0;
-                padding-left: 39px;
+                margin-left: 39px;
                 position: relative;
                 cursor: pointer;
                 transition: 0.3s ease-in-out;
@@ -730,8 +730,8 @@
                 margin-bottom: 32px;
             }
 
-            & [type="radio"]:checked,
-            & [type="radio"]:not(:checked) {
+            & [type="checkbox"]:checked,
+            & [type="checkbox"]:not(:checked) {
                 position: absolute;
                 left: -9999px;
             }
@@ -739,9 +739,8 @@
             & .accordion__title {
                 & p {
                     position: absolute;
-                    left: 2px;
+                    left: -37px;
                     top: 10px;
-                    z-index: -1;
 
                     & label {
                         position: relative;
@@ -749,8 +748,8 @@
                 }
             }
 
-            & [type="radio"]:checked+label,
-            & [type="radio"]:not(:checked)+label {
+            & [type="checkbox"]:checked+label,
+            & [type="checkbox"]:not(:checked)+label {
                 position: relative;
                 padding-bottom: 24px;
                 cursor: pointer;
@@ -763,8 +762,8 @@
                 font-family: var(--secondary-font);
             }
 
-            & [type="radio"]:checked+label:before,
-            & [type="radio"]:not(:checked)+label:before {
+            & [type="checkbox"]:checked+label:before,
+            & [type="checkbox"]:not(:checked)+label:before {
                 content: '';
                 position: absolute;
                 left: 0;
@@ -773,43 +772,200 @@
                 height: 20px;
                 border: 1px solid var(--primary-color);
                 border-radius: 100%;
-                background: #fff;
+                background: #FFF;
             }
 
-            & [type="radio"]:checked+label:before {
+            & [type="checkbox"]:checked+label:before {
                 border-color: var(--primary-color);
+                background: var(--primary-color);
             }
 
-            & [type="radio"]:checked+label:after,
-            & [type="radio"]:not(:checked)+label:after {
-                content: "";
-                width: 14px;
-                height: 14px;
-                background: var(--primary-color);
+            & [type="checkbox"]:checked+label:after,
+            & [type="checkbox"]:not(:checked)+label:after {
+                content: "\f00c";
+                font-family: "FontAwesome";
+                width: auto;
+                height: auto;
+                background: transparent;
                 position: absolute;
-                bottom: 3px;
-                left: 3px;
+                color: #FFFFFF;
+                bottom: 1.5px;
+                left: 4.5px;
                 border-radius: 100%;
                 -webkit-transition: all 0.2s ease;
                 transition: all 0.2s ease;
 
-                [type="radio"]:not(:checked)+label:after {
+                [type="checkbox"]:not(:checked)+label:after {
                     opacity: 0;
                     -webkit-transform: scale(0);
                     transform: scale(0);
                 }
             }
 
-            & [type="radio"]:not(:checked)+label:after {
+            & [type="checkbox"]:not(:checked)+label:after {
                 opacity: 0;
                 -webkit-transform: scale(0);
                 transform: scale(0);
             }
 
-            & [type="radio"]:checked+label:after {
+            & [type="checkbox"]:checked+label:after {
                 opacity: 1;
                 -webkit-transform: scale(1);
                 transform: scale(1);
+            }
+        }
+    }
+
+    & .rlt_pd_service {
+        & .form_step_content {
+            & h2 {
+                margin-bottom: 32px;
+                position: relative;
+            }
+
+            & .step_info {
+                margin-bottom: 32px;
+            }
+
+            & [type="checkbox"] {
+                position: absolute;
+                left: -9999px;
+            }
+
+            & .accordion__title {
+                & p {
+                    position: absolute;
+                    left: -37px;
+                    top: 0px;
+                    margin-bottom: 0;
+
+                    & label {
+                        position: relative;
+                    }
+                }
+            }
+
+            & [type="checkbox"]:checked+label,
+            & [type="checkbox"]:not(:checked)+label {
+                position: relative;
+                padding-bottom: 24px;
+                cursor: pointer;
+                font-size: 12px;
+                line-height: 16px;
+                display: inline-block;
+                color: #949494;
+                margin: 0;
+                text-transform: capitalize;
+                font-family: var(--secondary-font);
+            }
+
+            & [type="checkbox"]:checked+label:before,
+            & [type="checkbox"]:not(:checked)+label:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--primary-color);
+                border-radius: 100%;
+                background: #FFF;
+            }
+
+            & [type="checkbox"]:checked+label:before {
+                border-color: var(--primary-color);
+                background: var(--primary-color);
+            }
+
+            & [type="checkbox"]:checked+label:after,
+            & [type="checkbox"]:not(:checked)+label:after {
+                content: "\f00c";
+                font-family: "FontAwesome";
+                width: auto;
+                height: auto;
+                background: transparent;
+                position: absolute;
+                color: #FFFFFF;
+                bottom: 1.5px;
+                left: 4.5px;
+                border-radius: 100%;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+
+                [type="checkbox"]:not(:checked)+label:after {
+                    opacity: 0;
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                }
+            }
+
+            & [type="checkbox"]:not(:checked)+label:after {
+                opacity: 0;
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            & [type="checkbox"]:checked+label:after {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+
+            & .accordion__content {
+                padding-top: 4px 0 0;
+
+                &::after {
+                    bottom: 0px !important;
+                    height: 43px !important;
+                }
+
+                & p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .service_item {
+            position: relative;
+            padding: 4px 0 0;
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -27px;
+                bottom: 0;
+                width: 1px;
+                height: calc(100% + 40px);
+                background: #BFBFBF;
+            }
+
+            & h4 {
+                font-family: var(--primary-font);
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 26px;
+                margin-bottom: 4px;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 12px;
+                    height: 26px;
+                    left: -27px;
+                    top: -12px;
+                    border-bottom: 1px solid #BFBFBF;
+                    border-bottom-left-radius: 8px !important;
+                }
+            }
+
+            & p {
+                margin: 0;
             }
         }
     }
