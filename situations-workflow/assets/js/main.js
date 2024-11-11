@@ -160,7 +160,6 @@
     $(".accordion__title input[type='checkbox']").click(function (event) {
         event.stopPropagation();
     });
-
     $(".accordion__title").click(function (event) {
         if ($(event.target).is('input[type="checkbox"]')) {
             return;
@@ -173,22 +172,17 @@
 
         $accordion_content.stop(true, true);
 
-        // Close all other accordions within the same level
         $accordion_wrapper.siblings(".accordion_item").each(function () {
             $(this).removeClass($accordion_open);
             $(this).find(".accordion__title").removeClass("show");
             $(this).find(".accordion__content").stop(true, true).slideUp();
         });
 
-        // If this accordion is already open
         if ($accordion_wrapper.hasClass($accordion_open)) {
             $accordion_content.slideUp();
             $accordion_wrapper.removeClass($accordion_open);
             $accordion_title.removeClass("show");
-        }
-
-        // If this accordion is not open
-        else {
+        } else {
             $accordion_content.slideDown();
             $accordion_wrapper.addClass($accordion_open);
             $accordion_title.addClass("show");
@@ -196,11 +190,7 @@
     });
 
 
-
-
-
-
-
+    // Step Form 
     const prevBtns = document.querySelectorAll(".btn_prev");
     const nextBtns = document.querySelectorAll(".btn_next");
     const progress = document.getElementById("progress");
@@ -254,24 +244,30 @@
 
 
 
-
+    // Form Data Store in sheet 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzAwd7trKb6dA2jgOpMRJ5q143-8Q9yowST9qWoDCwlIuWQudeTnzr8hqKX7GslsgFc/exec'
 
-    const form = document.forms['situations-step-form']
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, {
-                method: 'POST',
-                body: new FormData(form)
-            })
-            .then(response => $(".subscribe_field").append("<span class='st_submit_form_alert'>Thanks. The form has been submitted</span>"))
-            .then(() => {
-                setTimeout(function () {
-                    $(".subscribe_field .st_submit_form_alert").hide();
-                }, 3500)
-            })
-            .catch(error => console.error('Error!', error.message))
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.forms['situations-step-form'];
+
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .then(response => {
+                        $(".subscribe_field").append("<span class='st_submit_form_alert'>Thanks. The form has been submitted</span>");
+                        setTimeout(() => {
+                            $(".subscribe_field .st_submit_form_alert").hide();
+                        }, 3500);
+                    })
+                    .catch(error => console.error('Error!', error.message));
+            });
+        }
     });
+
 
 
 

@@ -26,7 +26,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-5 col-lg-4 col-7">
                         <div class="st_header_logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="img-fluid"></a>
+                            <a href="home.html"><img src="assets/images/logo.png" alt="logo" class="img-fluid"></a>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-7 col-5">
@@ -39,8 +39,7 @@
                                     <li><a href="about.html">About us</a></li>
                                 </ul>
                             </nav>
-                            <div class="st_header_btns d-flex gap-3 align-items-center justify-content-end">
-                                <a target="_blank" href="https://situations-596dcd59e0eb.herokuapp.com/" class="template-btn primary-btn">Try our prototype</a>
+                            <div class="st_header_btns d-flex gap-3 align-items-center justify-content-end d-lg-none">
                                 <button type="button" class="st_mobile_menu_toggle menu_btn">
                                     <span></span>
                                     <span></span>
@@ -75,7 +74,7 @@
                             <!-- Steps 1-->
                             <div class="form_step form_step_active">
                                 <div class="row g-5 g-md-4">
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 d-none d-md-block">
                                         <div class="form_step_thumb text-center">
                                             <img src="assets/images/form/step-2.png" alt="Your Situation" class="img-fluid">
                                         </div>
@@ -94,12 +93,7 @@
                                         <div class="form_step_field mn-height-420">
                                             <div class="input-group">
                                                 <label class="form-label link" for="your-ituation"><a href="#modal_step_2" data-bs-toggle="modal">See examples</a></label>
-                                                <textarea name="the-textarea" id="step_message" maxlength="500" placeholder="Your self-introduction goes here..." autofocus></textarea>
-                                                <div id="the_count">(
-                                                    <span id="current">0</span>
-                                                    <span id="maximum_limit">/ 500</span>
-                                                    )
-                                                </div>
+                                                <textarea name="the-textarea" id="step_message" maxlength="500" placeholder="Describe your situation..." autofocus></textarea>
                                             </div>
                                             <div class="text-end w-100">
                                                 <a href="#" class="btn btn_next template-btn primary-btn ml-auto text-white">Submit</a>
@@ -112,7 +106,7 @@
                             <!-- Steps 2-->
                             <div class="form_step">
                                 <div class="row g-5 g-md-4">
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 d-none d-md-block">
                                         <div class="form_step_thumb text-center">
                                             <img src="assets/images/form/step-3.png" alt="Your Situation" class="img-fluid">
                                         </div>
@@ -175,13 +169,13 @@
                                             <div class="accordion_wrapper mb-5">
                                                 <!-- Start AcCordion Items  -->
                                                 <div class="accordion_item">
+                                                    <p>
+                                                        <input type="checkbox" name="solution_result1" id="solution_result">
+                                                        <label for="solution_result"></label>
+                                                    </p>
                                                     <h2 class="accordion__title">
                                                         <span class="sub_heading">Strategy 1:</span>
-                                                        Expand Digital Marketing Presence
-                                                        <p>
-                                                            <input type="checkbox" name="solution_result1" id="solution_result">
-                                                            <label for="solution_result"></label>
-                                                        </p>
+                                                        Expand Digital Marketing Presence<i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <!-- nested acordion  -->
@@ -236,13 +230,13 @@
                                                 </div>
                                                 <!-- AcCordion Items  -->
                                                 <div class="accordion_item accordion--open">
+                                                    <p>
+                                                        <input type="checkbox" name="solution_result2" id="solution_result2">
+                                                        <label for="solution_result2"></label>
+                                                    </p>
                                                     <h2 class="accordion__title">
                                                         <span class="sub_heading">Strategy 2:</span>
-                                                        Improve Customer Experience
-                                                        <p>
-                                                            <input type="checkbox" name="solution_result2" id="solution_result2">
-                                                            <label for="solution_result2"></label>
-                                                        </p>
+                                                        Improve Customer Experience<i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <!-- nested acordion  -->
@@ -297,13 +291,14 @@
                                                 </div>
                                                 <!-- AcCordion Items  -->
                                                 <div class="accordion_item">
+                                                    <p>
+                                                        <input type="checkbox" name="solution_result3" id="solution_result3">
+                                                        <label for="solution_result3"></label>
+                                                    </p>
                                                     <h2 class="accordion__title">
                                                         <span class="sub_heading">Strategy 3:</span>
                                                         Boost Employee Productivity
-                                                        <p>
-                                                            <input type="checkbox" name="solution_result3" id="solution_result3">
-                                                            <label for="solution_result3"></label>
-                                                        </p>
+                                                        <i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <!-- nested acordion  -->
@@ -362,13 +357,14 @@
                                             <div class="accordion_wrapper">
                                                 <!-- Start AcCordion Items  -->
                                                 <div class="accordion_item">
+                                                    <p>
+                                                        <input type="checkbox" name="failing_result1" id="failing_result">
+                                                        <label for="failing_result"></label>
+                                                    </p>
                                                     <h2 class="accordion__title">
                                                         <span class="sub_heading">Strategy 1:</span>
                                                         Expand Digital Marketing Presence
-                                                        <p>
-                                                            <input type="checkbox" name="failing_result1" id="failing_result">
-                                                            <label for="failing_result"></label>
-                                                        </p>
+                                                        <i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <!-- nested acordion  -->
@@ -423,13 +419,14 @@
                                                 </div>
                                                 <!-- AcCordion Items  -->
                                                 <div class="accordion_item">
+                                                    <p>
+                                                        <input type="checkbox" name="failing_result2" id="failing_result2">
+                                                        <label for="failing_result2"></label>
+                                                    </p>
                                                     <h2 class="accordion__title">
                                                         <span class="sub_heading">Strategy 2:</span>
                                                         Improve Customer Experience
-                                                        <p>
-                                                            <input type="checkbox" name="failing_result2" id="failing_result2">
-                                                            <label for="failing_result2"></label>
-                                                        </p>
+                                                        <i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <!-- nested acordion  -->
@@ -511,10 +508,7 @@
                                                 <!-- AcCordion Items  -->
                                                 <div class="accordion_item">
                                                     <h2 class="accordion__title">Products:
-                                                        <p>
-                                                            <input type="checkbox" name="rtl_pd" id="rtl_pd">
-                                                            <label for="rtl_pd"></label>
-                                                        </p>
+                                                        <i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <div class="service_item">
@@ -534,10 +528,7 @@
                                                 <!-- AcCordion Items  -->
                                                 <div class="accordion_item">
                                                     <h2 class="accordion__title">Services:
-                                                        <p>
-                                                            <input type="checkbox" name="rtl_service" id="rtl_service">
-                                                            <label for="rtl_service"></label>
-                                                        </p>
+                                                        <i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <div class="service_item">
@@ -569,7 +560,7 @@
                             <!-- Steps 5-->
                             <div class="form_step feeback_step">
                                 <div class="row g-5 g-md-4">
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 d-none d-md-block">
                                         <div class="form_step_thumb text-center">
                                             <img src="assets/images/form/step-5.png" alt="Your Situation" class="img-fluid">
                                         </div>
@@ -589,7 +580,7 @@
                                                 <h4>Did you find our recommendations useful?</h4>
                                                 <div class="input_radio_field">
                                                     <p>
-                                                        <input type="radio" id="nUseful" name="recommendations_usefull" value="no" checked>
+                                                        <input type="radio" id="nUseful" name="recommendations_usefull" value="no" >
                                                         <label for="nUseful">No</label>
                                                     </p>
                                                     <p>
@@ -602,7 +593,7 @@
                                                 <h4>Did you learn anything new regarding your situation?</h4>
                                                 <div class="input_radio_field">
                                                     <p>
-                                                        <input type="radio" id="nSituation" name="learned_anything_new" value="no" checked>
+                                                        <input type="radio" id="nSituation" name="learned_anything_new" value="no" >
                                                         <label for="nSituation">No</label>
                                                     </p>
                                                     <p>
@@ -615,7 +606,7 @@
                                                 <h4>Are recommended products and services relevant?</h4>
                                                 <div class="input_radio_field">
                                                     <p>
-                                                        <input type="radio" id="nRelevant" name="products_and_services_relevant" value="no" checked>
+                                                        <input type="radio" id="nRelevant" name="products_and_services_relevant" value="no" >
                                                         <label for="nRelevant">No</label>
                                                     </p>
                                                     <p>
@@ -653,15 +644,6 @@
                                         </div>
                                         <div class="form_step_content">
                                             <h2>Thanks for your feedback!</h2>
-                                            <p class="mx-auto">Please provide us with your email to get informed about our full featured product launch:</p>
-                                        </div>
-                                        <div class="form_step_field question_field subscribe_field">
-                                            <form action="#" method="post" class="subscribe_form" id="subscribe_form">
-                                                <div class="input-group">
-                                                    <input type="email" id="email" name="user-email" placeholder="Your email.." required>
-                                                    <button type="submit" class="btn template-btn primary-btn ml-auto text-white">Submit</button>
-                                                </div>
-                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -794,9 +776,6 @@
                             <li><a href="about.html">About Us</a></li>
                         </ul>
                     </nav>
-                    <div class="menuPopup_btn d-flex gap-3 align-items-center justify-content-center">
-                        <a href="https://situations-596dcd59e0eb.herokuapp.com/" target="_blank" class="template-btn primary-btn">Try our prototype</a>
-                    </div>
                 </div>
             </div>
         </div>
