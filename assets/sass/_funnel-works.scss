@@ -827,7 +827,7 @@
                 margin-bottom: 32px;
             }
 
-            & [type="checkbox"]{
+            & [type="checkbox"] {
                 position: absolute;
                 left: -9999px;
             }
@@ -914,36 +914,59 @@
             & .accordion__content {
                 padding-top: 4px 0 0;
 
+                &::after {
+                    bottom: 0px !important;
+                    height: 43px !important;
+                }
+
                 & p {
                     margin-bottom: 0;
                 }
             }
         }
 
-        & .accordion_item.accordion--nested {
-            & .accordion__content {
-                padding: 4px 0 0;
-                margin: 0;
+        .service_item {
+            position: relative;
+            padding: 4px 0 0;
+            margin: 0;
 
-                &::after,
-                &::before {
-                    display: none;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -27px;
+                bottom: 0;
+                width: 1px;
+                height: calc(100% + 40px);
+                background: #BFBFBF;
+            }
+
+            & h4 {
+                font-family: var(--primary-font);
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 26px;
+                margin-bottom: 4px;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 12px;
+                    height: 26px;
+                    left: -27px;
+                    top: -12px;
+                    border-bottom: 1px solid #BFBFBF;
+                    border-bottom-left-radius: 8px !important;
                 }
             }
 
-        }
-
-        & .accordion_item h4.accordion__title::before {
-            top: -12px;
-        }
-
-        & .accordion_item:not(.accordion--nested) .accordion__content::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-            width: 2px;
-            height: 23px;
+            & p {
+                margin: 0;
+            }
         }
     }
 

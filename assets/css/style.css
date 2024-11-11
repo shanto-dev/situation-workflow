@@ -2603,22 +2603,43 @@ mark {
     transform: scale(1); }
   .funnel_works_sec .rlt_pd_service .form_step_content .accordion__content {
     padding-top: 4px 0 0; }
+    .funnel_works_sec .rlt_pd_service .form_step_content .accordion__content::after {
+      bottom: 0px !important;
+      height: 43px !important; }
     .funnel_works_sec .rlt_pd_service .form_step_content .accordion__content p {
       margin-bottom: 0; }
-  .funnel_works_sec .rlt_pd_service .accordion_item.accordion--nested .accordion__content {
+  .funnel_works_sec .rlt_pd_service .service_item {
+    position: relative;
     padding: 4px 0 0;
     margin: 0; }
-    .funnel_works_sec .rlt_pd_service .accordion_item.accordion--nested .accordion__content::after, .funnel_works_sec .rlt_pd_service .accordion_item.accordion--nested .accordion__content::before {
-      display: none; }
-  .funnel_works_sec .rlt_pd_service .accordion_item h4.accordion__title::before {
-    top: -12px; }
-  .funnel_works_sec .rlt_pd_service .accordion_item:not(.accordion--nested) .accordion__content::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 2px;
-    height: 23px; }
+    .funnel_works_sec .rlt_pd_service .service_item:not(:last-child) {
+      margin-bottom: 20px; }
+    .funnel_works_sec .rlt_pd_service .service_item::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      bottom: 0;
+      width: 1px;
+      height: calc(100% + 40px);
+      background: #BFBFBF; }
+    .funnel_works_sec .rlt_pd_service .service_item h4 {
+      font-family: var(--primary-font);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 4px;
+      position: relative; }
+      .funnel_works_sec .rlt_pd_service .service_item h4:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 26px;
+        left: -27px;
+        top: -12px;
+        border-bottom: 1px solid #BFBFBF;
+        border-bottom-left-radius: 8px !important; }
+    .funnel_works_sec .rlt_pd_service .service_item p {
+      margin: 0; }
   .funnel_works_sec .final_submition {
     max-width: 727px;
     width: 100%;
